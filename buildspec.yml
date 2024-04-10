@@ -24,7 +24,7 @@ phases:
   pre_build:
     commands:
     - pip install -r requirements.txt
-    - pylint --exit-zero --output-format=text dairy main > pylint_report.txt
+    - pylint --exit-zero --output-format=text to_do_list task_group > pylint_report.txt
     - cat pylint_report.txt
     - PYLINT_SCORE=$(cat pylint_report.txt | grep 'Your code has been rated at' | cut -d' ' -f7 | cut -d'/' -f1)
     - echo "Pylint Score" + "${PYLINT_SCORE}"

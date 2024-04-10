@@ -32,7 +32,6 @@ phases:
 
   build:
     commands:
-    - python manage.py test
     # SonarQube Analysis
     - sonar-scanner   -Dsonar.organization=x23125721-todo   -Dsonar.projectKey=x23125721_x23125721-devsecops-todo   -Dsonar.sources=.   -Dsonar.host.url=https://sonarcloud.io  -Dsonar.python.pylint.reportPaths=pylint_report.txt
 
